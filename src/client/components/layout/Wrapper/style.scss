@@ -1,0 +1,11 @@
+@import '../../../styles/sizes';
+@import '../../../styles/indices';
+@import '../../../styles/mixins.scss';
+
+.wrapper {
+  position: absolute;
+  @include place(0, 0, auto, 0);
+  overflow: hidden;
+  //min-height: calc(100% - #{size(header)})
+  min-height: 100%;
+}

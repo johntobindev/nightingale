@@ -1,0 +1,12 @@
+@import '../../../styles/sizes';
+@import '../../../styles/breakpoints';
+
+.container {
+  max-width: size(maxWidth);
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @include break(750px) {
+    padding: 0 1rem;
+  }
+}

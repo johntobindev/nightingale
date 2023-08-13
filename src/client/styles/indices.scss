@@ -1,0 +1,14 @@
+$indices: (
+  content: 1,
+  header: 2,
+  overlay: 3,
+);
+
+@function index($key) {
+  @if map-has-key($indices, $key) {
+    @return map-get($indices, $key);
+  }
+
+  @warn 'Unknown `#{$key}` in $indices';
+  @return null
+}

@@ -1,0 +1,45 @@
+$colors: (
+  primary: rgb(255, 237, 71), /* 255, 227, 71 | 255, 224, 50 | 71 255 154 */
+  primary-light: rgb(255, 241, 117),
+  primary-dark: rgb(224, 208, 62),
+
+  secondary: rgb(44, 111, 255),
+
+  star: darkorange,
+  star-empty: #ccc,
+
+  body: #2a2a2a,
+  header: #2a2a2a,
+  footer: #2a2a2a,
+
+  text: #fff,
+  text-light: #ccc,
+  text-super-light: #aaa,
+
+  text-alt: #fff,
+  text-alt-light: #ccc,
+
+  grey: #eaeaea,
+  grey-light: #fbfbfb,
+  grey-super-light: #3d3d3d,
+
+  success: rgb(21, 187, 118),
+  error: rgb(187, 21, 21),
+
+  border-gray: #ddd,
+  border-gray-light: #3b3b3b,
+
+  border-gray-alt: #2a2a2a,
+
+  bg-gray: #1d1d1d,
+  bg-gray-hover: #252525,
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn 'Unknown `#{$key}` in $colors';
+  @return null
+}

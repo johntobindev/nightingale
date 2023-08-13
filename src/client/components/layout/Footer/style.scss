@@ -1,0 +1,7 @@
+@import '../../../styles/sizes';
+
+.container {
+  max-width: size(maxWidth);
+  margin: 0 auto;
+  padding: 0 2rem;
+}

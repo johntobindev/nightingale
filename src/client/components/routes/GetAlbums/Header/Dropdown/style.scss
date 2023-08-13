@@ -1,0 +1,66 @@
+@import '../../../../../styles/colors';
+@import '../../../../../styles/mixins';
+@import '../../../../../styles/breakpoints';
+
+.options-item {
+  position: relative;
+  margin-left: 1rem;
+
+  @include break(750px) {
+    margin-left: 0.5rem;
+  }
+}
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: color ease 150ms;
+
+  i {
+    margin-left: 0.15em;
+
+    @include break(750px) {
+      margin-left: 0.075rem;
+    }
+  }
+
+  &:hover {
+    color: #ccc;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  background: #111;
+  padding: 1rem 0;
+  @include place(100%, 0);
+  box-shadow: 0 2px 4px rgba(#000, 0.75);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+
+  span,
+  a {
+    display: flex;
+    white-space: nowrap;
+    color: color(text);
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    transition: color ease 150ms;
+
+    &:hover {
+      color: color(primary);
+    }
+  }
+}
+
+a.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+span.is-active,
+a.is-active {
+  color: color(primary) !important;
+}

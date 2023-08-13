@@ -1,0 +1,16 @@
+export default {
+  STANDARD_ERROR: 'An error occurred',
+  NETWORK_ERROR: 'Network error',
+  UNAUTHORISED: 'Unauthorised',
+  UNAUTHORISED_LOGGED_IN: 'You are not authorised to access this page',
+  UNAUTHORISED_NOT_LOGGED_IN: 'You must log in to access this page',
+  REQUIRED: 'Required',
+  INVALID: 'Invalid',
+  INVALID_OPTIONS: 'Invalid options',
+  INVALID_PAGE: 'Invalid page',
+  INVALID_WEEK: 'Invalid week',
+  INVALID_SLUG: 'Invalid slug',
+  INVALID_FILE_TYPE: 'Invalid file type',
+  INVALID_FILE_SIZE: 'Invalid file size',
+  NO_RESULTS: 'No results',
+}

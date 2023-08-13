@@ -1,0 +1,174 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/breakpoints';
+
+.header,
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.row {
+  @include break(750px) {
+    border-bottom: 1px solid #444;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.header {
+  font-size: 0.9em;
+  color: #999;
+  font-weight: 500;
+
+  @include break(750px) {
+    display: none;
+  }
+}
+
+.number {
+  width: 2rem;
+  text-align: right;
+  padding-right: 0.5rem;
+
+  span {
+    display: none;
+
+    @include break(750px) {
+      display: inline;
+    }
+  }
+
+  @include break(750px) {
+    margin-right: auto;
+    order: 1;
+    font-weight: 600;
+  }
+}
+
+.title {
+  flex: 1;
+  margin: 0 0.5rem;
+
+  label {
+    display: none;
+
+    @include break(750px) {
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+  }
+
+  div {
+    display: none;
+
+    @include break(750px) {
+      display: block;
+    }
+  }
+
+  @include break(750px) {
+    order: 3;
+    flex: none;
+    width: 100%;
+    margin: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+.length {
+  width: 8rem;
+
+  label {
+    display: none;
+
+    @include break(750px) {
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
+      display: block;
+    }
+  }
+
+  div {
+    display: none;
+
+    @include break(750px) {
+      display: block;
+    }
+  }
+
+  @include break(750px) {
+    order: 4;
+    flex: none;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+.options {
+  width: 6rem;
+  margin-left: 0.5rem;
+  align-self: stretch;
+  display: flex;
+
+  @include break(750px) {
+    order: 2;
+    height: 2rem;
+  }
+}
+
+.options-inner {
+  flex: 1;
+  display: flex;
+  box-shadow: inset 0 0 0 1px #444;
+}
+
+.options-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color ease 150ms;
+
+  &:first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #666;
+  }
+}
+
+.add-track {
+  border: 1px solid #444;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0 auto;
+  transition: background-color ease 150ms;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9em;
+
+  i {
+    margin-right: 0.5em;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #666;
+  }
+}
+
+.errors {
+  @include break(750px) {
+    display: none;
+  }
+}

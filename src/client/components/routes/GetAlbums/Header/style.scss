@@ -1,0 +1,19 @@
+@import '../../../../styles/colors';
+
+.header {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #444;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.count span {
+  font-weight: 600;
+}
+
+.options {
+  margin-left: auto;
+  display: flex;
+}

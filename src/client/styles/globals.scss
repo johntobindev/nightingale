@@ -1,0 +1,65 @@
+@import 'colors';
+@import 'mixins';
+@import 'variables';
+
+html {}
+
+body {
+  overflow-y: scroll;
+  background-color: color(body);
+  color: color(text);
+  font-weight: 400;
+  font-family: $bodyFontFamily;
+}
+
+em {
+  font-weight: 500;
+  font-style: normal;
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  font-family: $bodyFontFamily;
+  font-weight: 400;
+  color: color(text);
+  padding: 0;
+  border-radius: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    @include disabledButtonStyle;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+input {
+  font-family: $bodyFontFamily;
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+textarea[disabled],
+textarea[readonly] {
+  opacity: 0.5;
+}

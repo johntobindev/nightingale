@@ -1,0 +1,103 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/mixins';
+@import '../../../../styles/breakpoints';
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  @include break(750px) {
+    flex-direction: column;
+  }
+}
+
+.image {
+  $size: 12rem;
+  width: $size;
+  height: $size;
+  flex-shrink: 0;
+  background-color: #222;
+  border-radius: 50%;
+  border: 3px solid color(primary);
+  overflow: hidden;
+}
+
+@keyframes appear {
+  0% { opacity: 0; transform: rotate(-60deg); }
+  100% { opacity: 1; }
+}
+
+.image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: appear ease 250ms 1;
+}
+
+.wrapper {
+  line-height: 1.4;
+  padding: 1rem 1.5rem;
+
+  @include break(750px) {
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+  }
+}
+
+.name {
+  color: #fff;
+  text-decoration: none;
+  transition: color ease 150ms;
+
+  &:hover {
+    color: color(primary);
+  }
+}
+
+.name.is-active {
+  font-weight: 900;
+  font-size: 1.8em;
+}
+
+.year {
+  color: #aaa;
+}
+
+.edit-links {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  @include break(750px) {
+    margin-left: 0;
+    flex-direction: row;
+  }
+}
+
+.edit-link {
+  background-color: color(primary);
+  border-radius: 4px;
+  @include link(#000, false);
+  transition: background-color ease 150ms;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-align: center;
+
+  &:hover {
+    background-color: color(primary-dark);
+  }
+
+  &+.edit-link {
+    margin-top: 0.5rem;
+  }
+
+  @include break(750px) {
+    &+.edit-link {
+      margin-top: 0;
+      margin-left: 0.5rem;
+    }
+  }
+}

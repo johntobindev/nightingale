@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+  },
+  "include": [
+    "src",
+  ]
+}

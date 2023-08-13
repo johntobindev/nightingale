@@ -1,0 +1,16 @@
+$sizes: (
+  header: 5rem,
+  button: 2.25rem,
+  maxWidth: 80rem,
+  sidebar: 12rem,
+  content: 46rem,
+);
+
+@function size($key) {
+  @if map-has-key($sizes, $key) {
+    @return map-get($sizes, $key);
+  }
+
+  @warn 'Unknown `#{$key}` in $sizes';
+  @return null
+}
