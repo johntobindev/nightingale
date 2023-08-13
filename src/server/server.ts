@@ -32,9 +32,6 @@ app.use((req, res, next) => {
   const cspMiddleware = helmet(helmetConfig(res.locals.nonce))
 
   cspMiddleware(req, res, next)
-
-  //helmet(helmetConfig(res.locals.nonce))
-  //next()
 })
 
 app.use('/static', express.static(path.resolve(__dirname + './../../static')))
